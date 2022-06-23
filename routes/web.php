@@ -38,3 +38,27 @@ Route::get('/', function () {
     ];
     return view('home', $data);
 })->name('home');
+
+Route::get('/disburse', function () {
+    $data = [
+        'creditors' => [
+            [
+                'name' => 'Veronica Lario',
+                'amount' => '20.000.000,00€'
+            ],
+            [
+                'name' => 'Fondazione Olgettine',
+                'amount' => '5.000.000,00€'
+            ],
+            [
+                'name' => 'Noemi Letizia',
+                'amount' => '2.000.000,00€'
+            ],
+            [
+                'name' => 'Ruby Rubacuori',
+                'amount' => '1.000.000,00€'
+            ]
+        ]
+    ];
+    return view('disburse', $data);
+})->name('disburse');
